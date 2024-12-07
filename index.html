@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosam Alomari - Web Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div id="nav-links" class="nav-links">
+                <a class="active" href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="intro">
+            <h1>Hosam Alomari</h1>
+            <p>Web Developer | HTML | CSS | PHP | SQL</p>
+<img src="../IMG_20241109_023343_622.jpg" alt="Profile Picture" class="profile-pic" onclick="toggleImageSize(this)">
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Passionate about creating beautiful, functional, and user-friendly websites. My expertise spans front-end and back-end development with a focus on delivering top-notch user experiences.</p>
+        </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
+            <ul>
+                <li>HTML5, CSS3, JavaScript</li>
+                <li>Responsive Design & Animations</li>
+                <li>PHP & SQL Databases</li>
+                <li>Git & Version Control</li>
+                <li>Problem Solving & Debugging</li>
+            </ul>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <p>Some of my recent projects:</p>
+            <ul>
+                <li><a href="#">Food Delivery Website</a></li>
+                <li><a href="#">Car Dealership System</a></li>
+                <li><a href="#">Responsive Portfolio</a></li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="contact.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form> 
+            <br/>
+       <div align="center" class="socialbtns">
+        <ul>
+            <li><a href="https://web.facebook.com/profile.php?id=100089272303473" class="fa fa-lg fa-facebook"></a></li>
+            <li><a href="https://github.com/HOSAM-ALOMARI" class="fa fa-lg fa-github"></a></li>
+            <li><a href="https://www.linkedin.com/in/hosam-alomari-23221331a/" class="fa fa-lg fa-linkedin"></a></li>
+            <li><a href="./select-user/index.html" class="fa fa-lg fa-instagram"></a></li><br>
+            </ul>
+            </div>
+    </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Hosam Alomari. All rights reserved.</p>
+    </footer>
+
+    <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const menuIcon = document.querySelector('.menu-icon');
+                const navLinks = document.querySelector('.nav-links');
+        
+                menuIcon.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            });
+                function goBack() {
+                    window.history.back();
+                }
+        
+                function openProfile(url) {
+                    window.open(url, "_blank"); 
+                }
+        
+            </script>
+</body>
+</html>
